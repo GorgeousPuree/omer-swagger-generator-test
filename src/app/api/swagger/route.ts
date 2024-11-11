@@ -7,7 +7,7 @@ export async function GET() {
     LicencePatchDTO,
     NewLicenseDTO
   }, {
-    clearUnusedSchemas: true
+    clearUnusedSchemas: false
   });
 
   return Response.json(spec);
