@@ -1,10 +1,12 @@
 import generateOpenApiSpec from "@omer-x/next-openapi-json-generator";
 import ReactSwagger from "@/components/ReactSwagger";
-import { LicenseDTO } from "@/models/license";
+import { GetOrdersRequestDTO, NewOrderImageDTO, PaginationRequestDTO } from "@/models/order";
 
 const Page = async () => {
   const spec = await generateOpenApiSpec({
-    LicenseDTO,
+    PaginationRequestDTO,
+    GetOrdersRequestDTO,
+    NewOrderImageDTO,
   });
   return <ReactSwagger spec={spec} />;
 };

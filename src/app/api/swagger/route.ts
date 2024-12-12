@@ -1,11 +1,11 @@
-import { LicenseDTO, LicencePatchDTO, NewLicenseDTO } from "@/models/license";
+import { GetOrdersRequestDTO, NewOrderImageDTO, PaginationRequestDTO } from "@/models/order";
 import generateOpenApiSpec from "@omer-x/next-openapi-json-generator";
 
 export async function GET() {
   const spec = await generateOpenApiSpec({
-    LicenseDTO,
-    LicencePatchDTO,
-    NewLicenseDTO
+    PaginationRequestDTO,
+    GetOrdersRequestDTO,
+    NewOrderImageDTO
   }, {
     clearUnusedSchemas: false
   });
